@@ -1,23 +1,29 @@
 import React from 'react';
-import styles from '../styles'
-
-import { 
-  Text, 
-  View
+import {
+  StyleSheet,
+  View,
 } from 'react-native';
 
-class Profile extends React.Component {
-  state = {}
+import CameraComponent from '../components/Camera'; // 新規作成ファイル
 
-  componentWillMount() {}
+
+export default class Profile extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
 
   render() {
     return (
-     <View>
-      <Text>Profile</Text>
-     </View>
-    )
+      <View style={styles.container}>
+        <CameraComponent {...this.props} />
+      </View>
+    );
   }
 }
 
-export default Profile;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});

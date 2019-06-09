@@ -21,10 +21,14 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
-      "**/*"
+     "assets/*"
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "android": {
+      "package": "com.samplecompany.sampleappname"
+    },
+    "description": ""
   }
 }
